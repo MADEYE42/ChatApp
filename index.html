@@ -4,23 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chat-app</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/public/style.css">
 </head>
 <body>
     <div class="app">
-        <div class="screen join-screen ">
+        <div class="screen join-screen active">
             <div class="form">
                 <h2>Join Chatroom</h2>
                 <div class="form-input">
                     <label>Username</label>
-                    <input type="text" required placeholder="Enter the name everyone will recognize">
+                    <input type="text" required placeholder="Enter the name everyone will recognize" id="username">
                 </div>
                 <div class="form-input">
                     <button id="join-user" type="submit">Join</button>
                 </div>
             </div>
         </div>
-        <div class="screen chat-screen active">
+        <div class="screen chat-screen ">
             <div class="header">
                 <div class="logo">Chatroom</div>
                 <button id="exit-chat">Exit</button>
@@ -29,11 +29,11 @@
             </div>
             <div class="typebox">
                 <input type="text" id="message-input" placeholder="Type your text here">
-                <button>Send</button>
+                <button id="send-chat">Send</button>
             </div>
         </div>
     </div>
     <script src="socket.io/socket.io.js"></script>
-    <script src="code.js"></script>
+    <script src="/public/code.js"></script>
 </body>
 </html>
